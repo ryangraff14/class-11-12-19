@@ -1,0 +1,28 @@
+---
+title: "class-11-12-19"
+author: "Ryan Graff"
+date: "November 12, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(googlesheets4)
+library(tidyverse)
+```
+
+```{r}
+sheets_deauth()
+x <- read_sheet("13NhlT-Oik5P4NOKRWwrJ7xZQlddFNk81HHEw9wkWglM")
+
+ggplot(x, aes(x=partisanship, y = dvote)) + geom_jitter(height = 0.2) + geom_smooth(method = "lm", se = FALSE)
+
+ model <- lm(data = x, dvote ~ partisanship)
+```
+
+
+```{r}
+
+```
+
+
