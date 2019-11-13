@@ -21,7 +21,10 @@ ggplot(x, aes(x=partisanship, y = dvote)) + geom_jitter(height = 0.2) + geom_smo
 ```
 
 
-```{r}
+```{r logistic_regression, echo=FALSE}
+
+ggplot(x, aes(x=partisanship, y = dvote)) + geom_jitter(height=.2) + geom_smooth(method = "glm", method.args= list(family= "binomial"))
+
 
 ```
 
